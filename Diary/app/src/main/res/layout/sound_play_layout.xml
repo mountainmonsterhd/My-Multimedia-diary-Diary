@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:layout_gravity="center|top">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/Music_Bar_BG"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="3dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/music_bar" />
+
+        <Button
+            android:id="@+id/Music_Stop_bt"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/music_stop_bt_selector"
+            app:layout_constraintBottom_toBottomOf="@+id/Music_Bar_BG"
+            app:layout_constraintEnd_toStartOf="@+id/Music_Sound_Mute_bt"
+            app:layout_constraintTop_toBottomOf="@+id/Music_Seek_Bar" />
+
+        <SeekBar
+            android:id="@+id/Music_Seek_Bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/Music_Bar_BG"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Sound_Name" />
+
+        <TextView
+            android:id="@+id/Sound_Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="24dp"
+            android:text="time:00:00/00:00"
+            android:textSize="20dp"
+            android:typeface="serif"
+            app:layout_constraintBottom_toBottomOf="@+id/Music_Bar_BG"
+            app:layout_constraintStart_toStartOf="@+id/Music_Bar_BG"
+            app:layout_constraintTop_toBottomOf="@+id/Music_Seek_Bar" />
+
+        <TextView
+            android:id="@+id/Sound_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="12dp"
+            android:text="Sound name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/Music_Bar_BG" />
+
+        <Button
+            android:id="@+id/Music_Play_Pause_bt"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/music_play_bt_selector"
+            app:layout_constraintBottom_toBottomOf="@+id/Music_Bar_BG"
+            app:layout_constraintEnd_toStartOf="@+id/Music_Stop_bt"
+            app:layout_constraintTop_toBottomOf="@+id/Music_Seek_Bar" />
+
+        <Button
+            android:id="@+id/Music_Sound_Mute_bt"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/music_sound_bt_selector"
+            app:layout_constraintBottom_toBottomOf="@+id/Music_Bar_BG"
+            app:layout_constraintEnd_toEndOf="@+id/Music_Bar_BG"
+            app:layout_constraintTop_toBottomOf="@+id/Music_Seek_Bar" />
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
